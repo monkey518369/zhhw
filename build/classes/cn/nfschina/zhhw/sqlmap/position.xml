@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" 
+"http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="position">
+	<typeAlias alias="position" type="cn.nfschina.zhhw.model.Position"/>
+	<select id="getPosition" parameterClass="position" resultClass="position">  
+		select * from t_position
+		<dynamic prepend="where">
+			<isNotEmpty prepend="and" property="id">
+				id=#id#
+			</isNotEmpty>
+			<isNotEmpty prepend="and" property="altitude">
+				altitude=#altitude#
+			</isNotEmpty>
+			<isNotEmpty prepend="and" property="direction">
+				direction=#direction#
+			</isNotEmpty>
+			<isNotEmpty prepend="and" property="lat">
+				lat=#lat#
+			</isNotEmpty>
+			<isNotEmpty prepend="and" property="lng">
+				lng=#lng#
+			</isNotEmpty>
+			<isNotEmpty prepend="and" property="speed">
+				speed=#speed#
+			</isNotEmpty>
+			<isNotEmpty prepend="and" property="lng">
+				lng=#lng#
+			</isNotEmpty>
+			<isNotEmpty prepend="and" property="status">
+				status=#status#
+			</isNotEmpty>
+			<isNotEmpty prepend="and" property="createtime">
+				createtime=#createtime#
+			</isNotEmpty>
+			<isNotEmpty prepend="and" property="warning">
+				warning=#warning#
+			</isNotEmpty>
+			<isNotEmpty prepend="and" property="fk_car_id">
+				fk_car_id=#fk_car_id#
+			</isNotEmpty>
+		</dynamic>
+	</select>
+</sqlMap>

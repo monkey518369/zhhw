@@ -1,0 +1,17 @@
+.big-size-icon>a>span {
+	line-height: 100px;
+	padding-right: 100px;
+}
+
+.big-size-icon>a>span>span.l-btn-text {
+	width: 100px;
+	line-height: 100px;
+}
+
+.big-size-icon>a>span>span.l-btn-icon {
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	top: 0;
+	margin-top: 2px;
+}
